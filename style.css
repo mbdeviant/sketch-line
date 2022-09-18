@@ -1,0 +1,12 @@
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: red;
+    width: 550px;
+    height: 550px;
+}
+.grid-item{
+    background-color: gold;
+    text-align: center;
+    border:1px solid black;
+}
