@@ -1,13 +1,27 @@
-.grid-container{
+html,
+body{
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.grid-container {
     display: grid;
     padding: 0;
     margin: 0;
-    grid-template-columns: repeat(16,auto);
+    grid-template-columns: repeat(16, auto);
     background-color: rgb(226, 222, 222);
     width: 550px;
     height: 550px;
 }
-.grid-item{
+
+.grid-item {
     text-align: center;
-    border:1px solid black;
+    border: 1px solid black;
+}
+.flex-container{
+    display: flex;    
 }
