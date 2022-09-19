@@ -1,11 +1,12 @@
 const container = document.querySelector('.grid-container');
+const gridItems = document.querySelector('.grid-item');
 
 function formGrid() {
     for (let i = 1; i <= 256; i++) {
-        div = document.createElement('div');
-        div.classList.add("grid-item");
-        div.textContent = ``;
-        container.appendChild(div);
+   
+        
     }
 }
+
 window.onload = formGrid();
+
