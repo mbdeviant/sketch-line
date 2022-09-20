@@ -1,12 +1,14 @@
 const container = document.querySelector('.grid-container');
-const gridItems = document.querySelector('.grid-item');
 
-function formGrid() {
-    for (let i = 1; i <= 256; i++) {
-   
-        
-    }
-}
+function formGrid(row,col) {
+    container.style.setProperty('--grid-row',row);
+    container.style.setProperty('--grid-col',col);
+    for (let i = 0;i <(row * col);i++){
+        let gridCell = document.createElement('div');
+        container.appendChild(gridCell).className = 'grid-item';
+    };
+};
 
-window.onload = formGrid();
+window.onload = formGrid(16,16);
+
 

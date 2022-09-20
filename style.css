@@ -7,9 +7,13 @@ body{
     justify-content: center;
     align-items: center;
 }
+:root{
+    --grid-col: 1;
+    --grid-row:1;
+}
 .grid-container {
-    display: inline-grid;
-    grid-auto-rows: auto;
+    display: grid;
+    grid-gap: 0;
     padding: 0;
     margin: 0;
     grid-template-columns: repeat(16, auto);
@@ -18,8 +22,6 @@ body{
     height: 550px;
 }
 .grid-item {
-    width: auto;
-    height: auto;
     text-align: center;
     border: 1px solid black;
 }
