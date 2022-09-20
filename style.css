@@ -14,14 +14,16 @@ body {
   }
   
   #container {
+    width: 600px;
+    height: 600px;
     display: grid;
     grid-gap: 0;
-    grid-template-rows: repeat(var(--grid-row), 1fr);
-    grid-template-columns: repeat(var(--grid-col), 1fr);
+    grid-template-rows: repeat(var(--grid-row), 0.5fr);
+    grid-template-columns: repeat(var(--grid-col), 0.5fr);
   }
   
   .grid-item {
-    padding: 1em;
-    border: 1px solid rgb(49, 48, 48);
+    
+    border: 0.001px solid rgb(49, 48, 48);
     text-align: center;
   }

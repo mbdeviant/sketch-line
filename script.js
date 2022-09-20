@@ -9,6 +9,6 @@ function formGrid(row, col) {
     };
 };
 
-window.onload = formGrid(5,5);
+window.onload = formGrid(100,100);
 
 
