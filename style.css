@@ -11,19 +11,19 @@ body {
 :root {
     --grid-col: 1;
     --grid-row: 1;
-  }
-  
-  #container {
+}
+
+#container {
     width: 600px;
     height: 600px;
     display: grid;
     grid-gap: 0;
     grid-template-rows: repeat(var(--grid-row), 0.5fr);
     grid-template-columns: repeat(var(--grid-col), 0.5fr);
-  }
-  
-  .grid-item {
-    
-    border: 0.001px solid rgb(49, 48, 48);
+    border: 0.5px thick gray;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;}
+
+.grid-item {
+    border: 0px transparent rgb(49, 48, 48);
     text-align: center;
-  }
+}
