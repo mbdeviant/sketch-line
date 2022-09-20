@@ -1,5 +1,5 @@
 html,
-body{
+body {
     padding: 0;
     margin: 0;
     height: 100vh;
@@ -7,24 +7,21 @@ body{
     justify-content: center;
     align-items: center;
 }
-:root{
+
+:root {
     --grid-col: 1;
-    --grid-row:1;
-}
-.grid-container {
+    --grid-row: 1;
+  }
+  
+  #container {
     display: grid;
     grid-gap: 0;
-    padding: 0;
-    margin: 0;
-    grid-template-columns: repeat(16, auto);
-    background-color: rgb(226, 222, 222);
-    width: 550px;
-    height: 550px;
-}
-.grid-item {
+    grid-template-rows: repeat(var(--grid-row), 1fr);
+    grid-template-columns: repeat(var(--grid-col), 1fr);
+  }
+  
+  .grid-item {
+    padding: 1em;
+    border: 1px solid rgb(49, 48, 48);
     text-align: center;
-    border: 1px solid black;
-}
-.flex-container{
-    display: flex;    
-}
+  }
