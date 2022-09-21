@@ -1,5 +1,8 @@
 const container = document.getElementById("container");
 const clearBtn = document.getElementById("clear-button");
+const resizeBtn = document.getElementById("resize-button");
+
+window.onload = formGrid(16, 16);
 
 function formGrid(row, col) {
     container.style.setProperty('--grid-row', row);
@@ -10,10 +13,19 @@ function formGrid(row, col) {
         gridCell.addEventListener('mouseover', () => {
             gridCell.style.background = "black";
         });
-        clearBtn.addEventListener('click',()=>{
+        clearBtn.addEventListener('click', () => {
             gridCell.style.background = "white";
         });
     };
 
 };
-window.onload = formGrid(75, 75);
+
+
+resizeBtn.addEventListener('click', () => {
+    let gridSize = prompt("Maximum 100, defines both rows and columns");
+    if (gridSize==null) return;
+    else if (gridSize > 100){
+        gridSize = 100;
+    }
+    formGrid(gridSize, gridSize);
+});
