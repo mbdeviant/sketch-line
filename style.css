@@ -21,9 +21,20 @@ body {
     grid-template-rows: repeat(var(--grid-row), 0.5fr);
     grid-template-columns: repeat(var(--grid-col), 0.5fr);
     border: 0.5px thick gray;
-    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;}
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+}
 
 .grid-item {
     border: 0px transparent rgb(49, 48, 48);
     text-align: center;
+}
+#resize-button{
+    background-color: rgba(17, 17, 26, 0.1);
+    align-self: center;
+    
+}
+.flex-container{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
