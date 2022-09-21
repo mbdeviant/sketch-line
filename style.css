@@ -28,12 +28,21 @@ body {
     border: 0px transparent rgb(49, 48, 48);
     text-align: center;
 }
-#resize-button{
+
+#resize-button {
     background-color: rgba(17, 17, 26, 0.1);
+    width: 65px;
+    align-self: center;
+}
+
+#clear-button {
+    background-color: rgba(17, 17, 26, 0.1);
+    width: 65px;
     align-self: center;
     
 }
-.flex-container{
+
+.flex-container {
     display: flex;
     flex-direction: column;
     gap: 8px;
