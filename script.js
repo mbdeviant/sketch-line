@@ -3,7 +3,6 @@ const clearBtn = document.getElementById("clear-button");
 const resizeBtn = document.getElementById("resize-button");
 const rgbBtn = document.getElementById("rgb-button");
 const eraseBtn = document.getElementById("eraser-button");
-const standartBtn = document.getElementById("bw-button");
 
 window.onload = formGrid(16, 16);
 
@@ -19,24 +18,14 @@ function formGrid(row, col) {
                 const randomColor = Math.floor(Math.random() * 16777215).toString(16);
                 gridCell.style.background = "#" + randomColor;
             }
-            else if (gridCell.classList.contains('erase') == true ) {
-                
-                gridCell.style.background = "white";
-
-            }
-
         });
-        rgbBtn.addEventListener('click', () => {
-            gridCell.classList.toggle("rgb");
-            rgbBtn.classList.add("clicked");
-        });
-        eraseBtn.addEventListener('click', () => {
-            gridCell.classList.toggle("erase");
-        })
         clearBtn.addEventListener('click', () => {
             gridCell.style.background = "white";
         });
-        
+        rgbBtn.addEventListener('click', () => {
+            gridCell.classList.toggle("rgb");
+        });
+
     };
 
 };
