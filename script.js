@@ -1,4 +1,5 @@
 const container = document.getElementById("container");
+const clearBtn = document.getElementById("clear-button");
 
 function formGrid(row, col) {
     container.style.setProperty('--grid-row', row);
@@ -8,6 +9,9 @@ function formGrid(row, col) {
         container.appendChild(gridCell).className = 'grid-item';
         gridCell.addEventListener('mouseover', () => {
             gridCell.style.background = "black";
+        });
+        clearBtn.addEventListener('click',()=>{
+            gridCell.style.background = "white";
         });
     };
 
