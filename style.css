@@ -59,3 +59,7 @@ body {
     gap:8px;
     margin-right: 8px;
 }
+
+.clicked{
+    background-color: blueviolet;
+}
