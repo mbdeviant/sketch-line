@@ -1,6 +1,7 @@
 const container = document.getElementById("container");
 const clearBtn = document.getElementById("clear-button");
 const resizeBtn = document.getElementById("resize-button");
+const rgbBtn = document.getElementById("rgb-button");
 
 window.onload = formGrid(16, 16);
 
@@ -12,14 +13,21 @@ function formGrid(row, col) {
         container.appendChild(gridCell).className = 'grid-item';
         gridCell.addEventListener('mouseover', () => {
             gridCell.style.background = "black";
+            if (gridCell.classList.contains('rgb') == true) {
+                const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+                gridCell.style.background = "#" + randomColor;
+            }
         });
         clearBtn.addEventListener('click', () => {
             gridCell.style.background = "white";
         });
+        rgbBtn.addEventListener('click', () => {
+            gridCell.classList.toggle("rgb");
+        })
+
     };
 
 };
-
 
 resizeBtn.addEventListener('click', () => {
     let gridSize = prompt("Maximum 100, defines both rows and columns");
