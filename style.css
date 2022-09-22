@@ -14,8 +14,8 @@ body {
 }
 
 #container {
-    width: 600px;
-    height: 600px;
+    width: 750px;
+    height: 750px;
     display: grid;
     grid-gap: 0;
     grid-template-rows: repeat(var(--grid-row), 0.5fr);
