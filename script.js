@@ -15,7 +15,7 @@ function formGrid(row, col) {
         container.appendChild(gridCell).className = 'grid-item';
         gridCell.addEventListener('mouseover', () => {
             gridCell.style.background = "black";
-            if (gridCell.classList.contains('rgb') == true) {
+            if (gridCell.classList.contains('rgb')) {
                 const randomColor = Math.floor(Math.random() * 16777215).toString(16);
                 gridCell.style.background = "#" + randomColor;
             }
@@ -27,25 +27,28 @@ function formGrid(row, col) {
             gridCell.style.background = "white";
         });
         bwBtn.addEventListener('click',()=>{
+            bwBtn.classList.add("clicked");
             gridCell.classList.remove("rgb");
             gridCell.classList.remove("eraser");
-            bwBtn.classList.add("clicked");
             rgbBtn.classList.remove("clicked");
             eraserBtn.classList.remove("clicked");
         })
         rgbBtn.addEventListener('click', () => {
             gridCell.classList.add("rgb");
-            gridCell.classList.remove("eraser");
             rgbBtn.classList.add("clicked");
+            gridCell.classList.remove("eraser");
             eraserBtn.classList.remove("clicked");
             bwBtn.classList.remove("clicked");
         });
         eraserBtn.addEventListener('click',()=>{
             gridCell.classList.add("eraser");
-            gridCell.classList.remove("rgb");
             eraserBtn.classList.add("clicked");
+            gridCell.classList.remove("rgb");
             rgbBtn.classList.remove("clicked");
             bwBtn.classList.remove("clicked");
+        });
+        resizeBtn.addEventListener('click', ()=>{
+            gridCell.style.background = "white"; 
         });
 
     };
@@ -53,13 +56,16 @@ function formGrid(row, col) {
 };
 
 resizeBtn.addEventListener('click', () => {
-    let gridSize = prompt("Maximum 100, defines both rows and columns");
-    //typeof prompt is always string
-    //if user input is string, grid blows. fix that later
-    //change it to a slider
-    if (gridSize == null) return;
-    else if (gridSize > 100) {
-        gridSize = 100;
+    let promptGridSize = prompt("Maximum 100, defines both rows and columns");
+    let gridSize = parseInt(promptGridSize);
+    if (promptGridSize == null) return;
+    else if (isNaN(gridSize)){
+        window.alert("a number between 1 and 100 please");
+        return;
+    }
+    else if (gridSize < 0 || gridSize > 100 ) {
+        window.alert("a number between 1 and 100 please");
+        return;
     }
     formGrid(gridSize, gridSize);
 });
