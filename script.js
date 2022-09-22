@@ -2,7 +2,7 @@ const container = document.getElementById("container");
 const clearBtn = document.getElementById("clear-button");
 const resizeBtn = document.getElementById("resize-button");
 const rgbBtn = document.getElementById("rgb-button");
-const eraseBtn = document.getElementById("eraser-button");
+const eraserBtn = document.getElementById("eraser-button");
 
 window.onload = formGrid(16, 16);
 
@@ -18,12 +18,20 @@ function formGrid(row, col) {
                 const randomColor = Math.floor(Math.random() * 16777215).toString(16);
                 gridCell.style.background = "#" + randomColor;
             }
+            else if (gridCell.classList.contains("eraser")){
+                gridCell.style.background = "white";
+            }
         });
         clearBtn.addEventListener('click', () => {
             gridCell.style.background = "white";
         });
         rgbBtn.addEventListener('click', () => {
             gridCell.classList.toggle("rgb");
+            gridCell.classList.remove("eraser");
+        });
+        eraserBtn.addEventListener('click',()=>{
+            gridCell.classList.toggle("eraser");
+            gridCell.classList.remove("rgb");
         });
 
     };
