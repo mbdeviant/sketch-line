@@ -29,7 +29,8 @@ body {
     text-align: center;
 }
 
-#resize-button {
+#resize-button,
+#clear-button{
     background-color: rgba(17, 17, 26, 0.1);
     width: 65px;
     height: 25px;
@@ -37,15 +38,26 @@ body {
     align-self: center;
     border: transparent;
 }
+#resize-button:hover,
+#clear-button:hover{
+    background-color: gold;
+    transform: scale(1.1);
+    border:2px solid black;
+    cursor: pointer;
+}
 
-#clear-button {
-    background-color: rgba(17, 17, 26, 0.1);
-    width: 65px;
-    height: 25px;
+#bw-button,
+#rgb-button,
+#eraser-button{
     border-radius: 7px;
-    align-self: center;
-    border:transparent;
-
+    border: 2px solid black;
+    
+}
+#bw-button:hover,
+#rgb-button:hover,
+#eraser-button:hover{
+    background-color: gold;
+    transform:scale(1.1);
 }
 
 .flex-container {
@@ -60,5 +72,6 @@ body {
     margin-right: 8px;
 }
 .clicked{
-    background-color: red;
+    background-color: gold;
+    transform:scale(1.1);
 }
