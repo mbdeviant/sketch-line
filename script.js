@@ -3,6 +3,7 @@ const clearBtn = document.getElementById("clear-button");
 const resizeBtn = document.getElementById("resize-button");
 const rgbBtn = document.getElementById("rgb-button");
 const eraserBtn = document.getElementById("eraser-button");
+const bwBtn = document.getElementById("bw-button");
 
 window.onload = formGrid(16, 16);
 
@@ -28,10 +29,14 @@ function formGrid(row, col) {
         rgbBtn.addEventListener('click', () => {
             gridCell.classList.toggle("rgb");
             gridCell.classList.remove("eraser");
+            rgbBtn.classList.add("clicked");
+            eraserBtn.classList.remove("clicked");
         });
         eraserBtn.addEventListener('click',()=>{
             gridCell.classList.toggle("eraser");
             gridCell.classList.remove("rgb");
+            eraserBtn.classList.add("clicked");
+            rgbBtn.classList.remove("clicked");
         });
 
     };
