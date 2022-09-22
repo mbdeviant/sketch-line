@@ -55,6 +55,7 @@ function formGrid(row, col) {
 resizeBtn.addEventListener('click', () => {
     let gridSize = prompt("Maximum 100, defines both rows and columns");
     //typeof prompt is always string
+    //if user input is string, grid blows. fix that later
     if (gridSize == null) return;
     else if (gridSize > 100) {
         gridSize = 100;
