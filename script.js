@@ -69,3 +69,12 @@ resizeBtn.addEventListener('click', () => {
     }
     formGrid(gridSize, gridSize);
 });
+
+
+
+
+
+
+
+
+//ps: doing everthing in a for loop probably is a bad practice, do this again 
