@@ -26,17 +26,26 @@ function formGrid(row, col) {
         clearBtn.addEventListener('click', () => {
             gridCell.style.background = "white";
         });
+        bwBtn.addEventListener('click',()=>{
+            gridCell.classList.remove("rgb");
+            gridCell.classList.remove("eraser");
+            bwBtn.classList.add("clicked");
+            rgbBtn.classList.remove("clicked");
+            eraserBtn.classList.remove("clicked");
+        })
         rgbBtn.addEventListener('click', () => {
-            gridCell.classList.toggle("rgb");
+            gridCell.classList.add("rgb");
             gridCell.classList.remove("eraser");
             rgbBtn.classList.add("clicked");
             eraserBtn.classList.remove("clicked");
+            bwBtn.classList.remove("clicked");
         });
         eraserBtn.addEventListener('click',()=>{
-            gridCell.classList.toggle("eraser");
+            gridCell.classList.add("eraser");
             gridCell.classList.remove("rgb");
             eraserBtn.classList.add("clicked");
             rgbBtn.classList.remove("clicked");
+            bwBtn.classList.remove("clicked");
         });
 
     };
