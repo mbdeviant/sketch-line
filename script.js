@@ -21,7 +21,7 @@ function formGrid(gridSize) {
 };
 
 resizeBtn.addEventListener('click', () => {
-    let promptGridSize = prompt("Maximum 100, defines both rows and columns");
+    let promptGridSize = prompt("Maximum 100, defines rows and columns");
     let gridSize = parseInt(promptGridSize);
     if (promptGridSize == null) return;
     else if (isNaN(gridSize)){
@@ -35,6 +35,10 @@ resizeBtn.addEventListener('click', () => {
     var gridCells = container.querySelectorAll('div');
     gridCells.forEach(gridCells  => gridCells.style.background = "white");
     formGrid(gridSize);
+});
+clearBtn.addEventListener('click',()=> {
+    var gridCells = container.querySelectorAll('div');
+    gridCells.forEach(gridCells => gridCells.style.background = "white");
 });
 
 
