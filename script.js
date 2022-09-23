@@ -21,6 +21,7 @@ function formGrid(gridSize) {
 bwBtn.addEventListener('click',()=>{
     bwBtn.classList.add("clicked");
     rgbBtn.classList.remove("clicked");
+    eraserBtn.classList.remove("clicked");
     var gridCells = container.querySelectorAll('div');
     gridCells.forEach(gridCells => gridCells.addEventListener('mouseover', ()=>{
         gridCells.style.background = "black";
@@ -29,12 +30,22 @@ bwBtn.addEventListener('click',()=>{
 rgbBtn.addEventListener('click', () => {
     rgbBtn.classList.add("clicked");
     bwBtn.classList.remove("clicked");
+    eraserBtn.classList.remove("clicked");
     var gridCells = container.querySelectorAll('div');
     gridCells.forEach(gridCells => gridCells.addEventListener('mouseover', () => {
         const randomColor = Math.floor(Math.random() * 16777215).toString(16);
         gridCells.style.background = "#" + randomColor;
     }));
 });
+eraserBtn.addEventListener('click', ()=>{
+    eraserBtn.classList.add("clicked");
+    bwBtn.classList.remove("clicked");
+    rgbBtn.classList.remove("clicked");
+    var gridCells = container.querySelectorAll('div');
+    gridCells.forEach(gridCells => gridCells.addEventListener('mouseover',()=>{
+        gridCells.style.background = "white";
+    }))
+})
 
 
 resizeBtn.addEventListener('click', () => {
