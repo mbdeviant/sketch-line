@@ -8,18 +8,14 @@ body {
     align-items: center;
 }
 
-:root {
-    --grid-col: 1;
-    --grid-row: 1;
-}
+
 
 #container {
     width: 750px;
     height: 750px;
     display: grid;
     grid-gap: 0;
-    grid-template-rows: repeat(var(--grid-row), 0.5fr);
-    grid-template-columns: repeat(var(--grid-col), 0.5fr);
+
     border: 0.5px thick gray;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
 }
