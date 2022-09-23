@@ -18,14 +18,24 @@ function formGrid(gridSize) {
     var gridCells = container.querySelectorAll('div');
     gridCells.forEach(gridCells => gridCells.addEventListener('mouseover', () => gridCells.style.background = "black"));
 };
+bwBtn.addEventListener('click',()=>{
+    bwBtn.classList.add("clicked");
+    rgbBtn.classList.remove("clicked");
+    var gridCells = container.querySelectorAll('div');
+    gridCells.forEach(gridCells => gridCells.addEventListener('mouseover', ()=>{
+        gridCells.style.background = "black";
+    }))
+});
 rgbBtn.addEventListener('click', () => {
     rgbBtn.classList.add("clicked");
+    bwBtn.classList.remove("clicked");
     var gridCells = container.querySelectorAll('div');
     gridCells.forEach(gridCells => gridCells.addEventListener('mouseover', () => {
         const randomColor = Math.floor(Math.random() * 16777215).toString(16);
         gridCells.style.background = "#" + randomColor;
     }));
 });
+
 
 resizeBtn.addEventListener('click', () => {
     let promptGridSize = prompt("Maximum 100, defines rows and columns");
