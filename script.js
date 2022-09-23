@@ -44,7 +44,7 @@ eraserBtn.addEventListener('click', ()=>{
     var gridCells = container.querySelectorAll('div');
     gridCells.forEach(gridCells => gridCells.addEventListener('mouseover',()=>{
         gridCells.style.background = "white";
-    }))
+    }));
 });
 resizeBtn.addEventListener('click', () => {
     let promptGridSize = prompt("Maximum 100, defines rows and columns");
@@ -66,12 +66,3 @@ clearBtn.addEventListener('click', () => {
     var gridCells = container.querySelectorAll('div');
     gridCells.forEach(gridCells => gridCells.style.background = "white");
 });
-
-
-
-
-
-
-
-
-//ps: doing everthing in a for loop probably is a bad practice, do this again 
