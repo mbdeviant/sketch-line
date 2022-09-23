@@ -14,10 +14,10 @@ function formGrid(gridSize) {
         container.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;
         container.style.gridTemplateRows = `repeat(${gridSize}, 1fr)`;
         container.appendChild(gridCell);
-    };
+    }
     var gridCells = container.querySelectorAll('div');
     gridCells.forEach(gridCells => gridCells.addEventListener('mouseover', () => gridCells.style.background = "black"));
-};
+}
 bwBtn.addEventListener('click',()=>{
     bwBtn.classList.add("clicked");
     rgbBtn.classList.remove("clicked");
@@ -25,7 +25,7 @@ bwBtn.addEventListener('click',()=>{
     var gridCells = container.querySelectorAll('div');
     gridCells.forEach(gridCells => gridCells.addEventListener('mouseover', ()=>{
         gridCells.style.background = "black";
-    }))
+    }));
 });
 rgbBtn.addEventListener('click', () => {
     rgbBtn.classList.add("clicked");
@@ -45,7 +45,7 @@ eraserBtn.addEventListener('click', ()=>{
     gridCells.forEach(gridCells => gridCells.addEventListener('mouseover',()=>{
         gridCells.style.background = "white";
     }))
-})
+});
 resizeBtn.addEventListener('click', () => {
     let promptGridSize = prompt("Maximum 100, defines rows and columns");
     let gridSize = parseInt(promptGridSize);
