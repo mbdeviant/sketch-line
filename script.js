@@ -46,8 +46,6 @@ eraserBtn.addEventListener('click', ()=>{
         gridCells.style.background = "white";
     }))
 })
-
-
 resizeBtn.addEventListener('click', () => {
     let promptGridSize = prompt("Maximum 100, defines rows and columns");
     let gridSize = parseInt(promptGridSize);
