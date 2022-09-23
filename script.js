@@ -58,6 +58,9 @@ resizeBtn.addEventListener('click', () => {
         window.alert("a number between 1 and 100 please");
         return;
     }
+    bwBtn.classList.remove("clicked");
+    rgbBtn.classList.remove("clicked");
+    eraserBtn.classList.remove("clicked");
     var gridCells = container.querySelectorAll('div');
     gridCells.forEach(gridCells => gridCells.style.background = "white");
     formGrid(gridSize);
