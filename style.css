@@ -8,25 +8,22 @@ body {
     align-items: center;
 }
 
-
-
 #container {
     width: 750px;
     height: 750px;
     display: grid;
     grid-gap: 0;
-
     border: 0.5px thick gray;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
 }
- 
+
 .grid-item {
     border: 0px transparent rgb(49, 48, 48);
     text-align: center;
 }
 
 #resize-button,
-#clear-button{
+#clear-button {
     background-color: rgba(17, 17, 26, 0.1);
     width: 65px;
     height: 25px;
@@ -34,26 +31,27 @@ body {
     align-self: center;
     border: transparent;
 }
+
 #resize-button:hover,
-#clear-button:hover{
+#clear-button:hover {
     background-color: gold;
     transform: scale(1.1);
-    border:2px solid black;
+    border: 2px solid black;
     cursor: pointer;
 }
 
 #bw-button,
 #rgb-button,
-#eraser-button{
+#eraser-button {
     border-radius: 7px;
     border: 2px solid black;
-    
 }
+
 #bw-button:hover,
 #rgb-button:hover,
-#eraser-button:hover{
+#eraser-button:hover {
     background-color: gold;
-    transform:scale(1.1);
+    transform: scale(1.1);
 }
 
 .flex-container {
@@ -61,13 +59,15 @@ body {
     flex-direction: column;
     gap: 8px;
 }
-.btn-container{
+
+.btn-container {
     display: flex;
     flex-direction: column;
-    gap:8px;
+    gap: 8px;
     margin-right: 8px;
 }
-.clicked{
+
+.clicked {
     background-color: gold;
-    transform:scale(1.1);
+    transform: scale(1.1);
 }
